@@ -1,0 +1,317 @@
+/* Resetting base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Fullscreen container */
+  body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Background image styling */
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://your-image-link.com/tiktok-login-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.5;
+  }
+  
+  /* Login container */
+  .login-container {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .login-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo style */
+  .logo {
+    font-size: 38px;
+    font-weight: 600;
+    color: #fe2c55;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -1px;
+  }
+  
+  /* Heading text */
+  h2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Input fields */
+  input {
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  /* Input focus effect */
+  input:focus {
+    border-color: #fe2c55;
+    box-shadow: 0 0 10px rgba(254, 44, 85, 0.2);
+  }
+  
+  /* Placeholder text styling */
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Password input */
+  input[type="password"] {
+    letter-spacing: 1px;
+  }
+  
+  /* Login button */
+  .login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #fe2c55;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  /* Button hover effect */
+  .login-button:hover {
+    background-color: #e01e3f;
+  }
+  
+  /* Extra links */
+  .extra-links {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+  }
+  
+  .extra-links a {
+    color: #fe2c55;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .extra-links a:hover {
+    color: #d1002d;
+  }
+  
+  .extra-links p {
+    margin: 5px 0;
+  }
+  
+  /* Footer container */
+  .footer-container {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .footer-container a {
+    color: #fe2c55;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-container a:hover {
+    color: #d1002d;
+  }
+  
+  /* Header container for TikTok's branding */
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .header-logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fe2c55;
+    letter-spacing: -2px;
+  }
+  
+  /* Background gradient */
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(254, 44, 85, 0.1), rgba(254, 44, 85, 0.3));
+    border-radius: 12px;
+    z-index: -1;
+    transition: background 0.3s ease;
+  }
+  
+  .login-container:hover::before {
+    background: linear-gradient(to bottom, rgba(254, 44, 85, 0.2), rgba(254, 44, 85, 0.5));
+  }
+  
+  /* Animations for smooth form appearance */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .login-container {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .extra-links a {
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  input {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 400px) {
+    .login-container {
+      padding: 25px;
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    .logo {
+      font-size: 30px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    .login-button {
+      font-size: 16px;
+    }
+  
+    .extra-links a {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .login-container {
+      width: 85%;
+    }
+  
+    .logo {
+      font-size: 34px;
+    }
+  }
+  
+  /* Dark Mode Styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1f1f1f;
+    }
+  
+    .login-container {
+      background-color: #222;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+  
+    input {
+      background-color: #444;
+      border: 1px solid #555;
+      color: #fff;
+    }
+  
+    input:focus {
+      border-color: #fe2c55;
+      box-shadow: 0 0 10px rgba(254, 44, 85, 0.3);
+    }
+  
+    .login-button {
+      background-color: #fe2c55;
+    }
+  
+    .login-button:hover {
+      background-color: #d1002d;
+    }
+  
+    .extra-links a {
+      color: #fe2c55;
+    }
+  
+    .footer-container {
+      color: #ccc;
+    }
+  }
+  
